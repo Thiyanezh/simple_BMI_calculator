@@ -1,6 +1,10 @@
 <html>
     <head>
         <style>
+            .main{
+                background: rgb(34,34,34);
+                background: radial-gradient(circle, rgba(34,34,34,1) 0%, rgba(34,34,34,1) 100%);
+            }
             .bmi{
                 background-color: #c5f277;
                 color: black;
@@ -49,11 +53,13 @@
                 const ans=((b/(a*a))*10000).toFixed(5);
                 document.querySelector('.out').innerHTML=ans;
             }
-            
+            function cat(ans){
+                document.querySelector('.ins').innerHTML=ans;
+            }
         </script>
     </head>
     <title>BMI calculator</title>
-    <body bgcolor="#f4f5f0">
+    <body class="main">
         <h1 class="bmi">BMI calculator</h1>
         <div style="background-color: lightgoldenrodyellow;margin-inline: 20px;">
         <div style="display: grid ;grid-template-columns: 100px 100px; ">
@@ -82,8 +88,8 @@
                  Overweight = 25–29.9 <br> 
                   Obesity = BMI of 30 or greater </p>
                 <img alt="BMI icon"  src="https://img.icons8.com/dotty/512/bmi.png" style="width: 200px; height: 200px; filter: invert(0%) sepia(100%) saturate(7500%) hue-rotate(347deg) brightness(89%) contrast(111%);">
-
             </table>
+            <div class="ins" ></div>
         </div>
         </div>
     </body>
