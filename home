@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <style>
+            .bmi{
+                background-color: #c5f277;
+                color: black;
+                border: 0px;
+                margin-inline: 20px;
+            }
+            .c{
+                background-color: #c5f277;
+                color: #222222;
+                height: 20px;
+                width: 80px;
+                border: 0cm;
+                justify-self: center;
+                margin-inline: 65px;
+                margin-top: 20px;
+            }
+            .click:hover
+            {
+                text-decoration: aliceblue;
+            }
+            .h,.w{
+                color: #222222;  
+                width: max-content;  
+                max-width: max-content;
+                margin-inline: 20px;     
+            }
+            .text1,.text2{
+                margin-inline: 20px; 
+            }
+            .out
+            {
+                margin-top: 20px;
+                padding-left: 15px;
+                background-color: lightskyblue;
+            }
+            .your{
+                margin-top: 20px;
+                margin-left: 20px;
+            }
+        </style>
+        <script>
+            function calculate()
+            {
+                const a = parseFloat(document.querySelector('.text1').value);
+                const b = parseInt(document.querySelector('.text2').value);
+                const ans=((b/(a*a))*10000).toFixed(5);
+                document.querySelector('.out').innerHTML=ans;
+            }
+            
+        </script>
+    </head>
+    <title>BMI calculator</title>
+    <body bgcolor="#f4f5f0">
+        <h1 class="bmi">BMI calculator</h1>
+        <div style="background-color: lightgoldenrodyellow;margin-inline: 20px;">
+        <div style="display: grid ;grid-template-columns: 100px 100px; ">
+        <div>
+        <span><p class="h" style="margin-top: 35px;">
+            Enter the height(cm):
+        </p></span><input type="number" class="text1">
+        <br
+        </div>
+        <div>
+        <p class="w">
+            Enter the weight(kg):
+        </p><input type="number" class="text2">
+        </div>
+        <button class="c" onclick="calculate()">click here</button>
+        <div style="margin-top: 10px;display: grid;grid-template-columns: 100px 100px;">
+        <div><p class="your">Your BMI:</p></div>
+        <div><p class="out"></p></div>
+        </div>
+        </div>
+        <div style="margin-left: 100;">
+            <table>
+            <p style="margin-top: 1.5em;padding:10px;width: 10cm;"><b>BMI Categories: </b><br>
+                Underweight = &lt;18.5<br> 
+                  Normal weight = 18.5–24.9 <br> 
+                 Overweight = 25–29.9 <br> 
+                  Obesity = BMI of 30 or greater </p>
+                <img alt="BMI icon"  src="https://img.icons8.com/dotty/512/bmi.png" style="width: 200px; height: 200px; filter: invert(0%) sepia(100%) saturate(7500%) hue-rotate(347deg) brightness(89%) contrast(111%);">
+
+            </table>
+        </div>
+        </div>
+    </body>
+</html>
